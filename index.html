@@ -1,22 +1,16 @@
 <!DOCTYPE html>
-<html>
 <head>
-	<title>contact form</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+<title>Form submission</title>
 </head>
 <body>
 
-<form class="container contactform" action="contact.php">
-
-	<label>Name</label>
-	<input type="text" name="name">
-	<label>E-mail</label>
-	<input type="text" name="email">
-	<label>Message</label>
-	<textarea name="message"></textarea>
-	<button class="submitbutton">Send Message</button>
-	
-
+<form action="contact.php" method="post">
+First Name: <input type="text" name="first_name"><br>
+Last Name: <input type="text" name="last_name"><br>
+Email: <input type="text" name="email"><br>
+Message:<br><textarea rows="5" name="message" cols="30"></textarea><br>
+<input type="submit" name="submit" value="Submit">
 </form>
+
 </body>
 </html>
