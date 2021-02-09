@@ -6,19 +6,18 @@
 </head>
 <body>
 
+	<h1>Form</h1>
+<form class="container contactform" action="contact.php">
+
+	<label>Name</label>
+	<input type="text" name="name">
+	<label>E-mail</label>
+	<input type="text" name="email">
+	<label>Message</label>
+	<textarea name="message"></textarea>
+	<button class="submitbutton">Send Message</button>
 	
-<h1>PHP Email Example</h1>
-<p>The form below will use a POST method to send data to the server. GET is another option, but the content will appear in the URL when submitting the form.</p>
 
-<!-- PHP Code here -->
-
-
-<!-- PHP Code END -->
-<form action="contact.php" method="post">
-  <p><input type="email" name="email" placeholder="name@domain.com"></p>
-  <p><input type="text" name="subject" placeholder="Do not fill this!"></p>
-  <p><textarea name="message" cols="30" rows="10" placeholder="Your Message"></textarea></p>
-  <p><input type="submit" value="Send Message"></p>
 </form>
 </body>
 </html>
