@@ -1,21 +1,25 @@
-<?php 
-if ($_POST["email"]<>'') { 
-    $ToEmail = 'mdashik8900@gmail.com'; 
-    $EmailSubject = 'Site contact form'; 
-    $mailheader = "From: ".$_POST["email"]."\r\n"; 
-    $mailheader .= "Reply-To: ".$_POST["email"]."\r\n"; 
-    $mailheader .= "Content-type: text/html; charset=iso-8859-1\r\n"; 
-    $MESSAGE_BODY = "Name: ".$_POST["name"].""; 
-    $MESSAGE_BODY .= "Email: ".$_POST["email"].""; 
-    $MESSAGE_BODY .= "Comment: ".nl2br($_POST["comment"]).""; 
-    mail($ToEmail, $EmailSubject, $MESSAGE_BODY, $mailheader) or die ("Failure"); 
-?> 
-Your message was sent
-<?php 
-} else { 
-?> 
+<?php
+//variable setting
+$name = $_REQUEST['name'];
+$email = $_REQUEST['email'];
+$message = $_REQUEST['message'];
 
 
-<?php 
-}; 
+//check input fields
+
+
+if (empty($name)|| empty($email) || empty($message)) {
+	echo "<script type='text/javascript'> alert ('please fill all the fields')";
+	}
+	else{
+
+		mail("mdashik8900@gmail.com", "demo", $message, "From: $name <$email>");
+
+
+		echo "<script type='text/javascript'>
+		alert('your message sent successfully');
+	
+
+		</script>";
+	}
 ?>
